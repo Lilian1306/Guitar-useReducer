@@ -18,7 +18,7 @@ export const initialState : CartState = {
     cart: []
 }
 
-export const cartReducr = (
+export const cartReducer = (
     state: CartState = initialState,
     action: CartActions
 
