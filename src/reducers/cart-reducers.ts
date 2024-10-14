@@ -54,8 +54,10 @@ export const cartReducer = (
         }
     }
     if(action.type === 'remove-from-cart'){
+        const updatedCart = state.cart.filter(item => item.id !== action.payload.id)
         return {
-            ...state
+            ...state,
+            cart: updatedCart
         }
     }
     if(action.type === 'decrease-quantity'){
